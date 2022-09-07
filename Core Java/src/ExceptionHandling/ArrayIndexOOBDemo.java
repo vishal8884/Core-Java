@@ -10,9 +10,16 @@ public class ArrayIndexOOBDemo {
 		
 		System.out.println("elements of array are");
 		
-		for(int i=0;i<=arr.length;i++) {
-			System.out.println(arr[i]);
+		try {
+		    for(int i=0;i<=arr.length;i++) {
+			    System.out.println(arr[i]);
+		    }
 		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("beyond array length :: "+e);
+		}
+		
+		System.out.println("After code");
 	}
 
 	

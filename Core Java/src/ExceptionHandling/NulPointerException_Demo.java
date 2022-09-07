@@ -6,7 +6,14 @@ public class NulPointerException_Demo {
 	
 	public static void main(String[] args) {
 
-		NulPointerException_Demo.a.test();
+		try {
+		    NulPointerException_Demo.a.test();
+		}
+		catch (NullPointerException e) {
+			System.out.println(e);
+		}
+		
+		System.out.println("code after");
 	}
 
 }

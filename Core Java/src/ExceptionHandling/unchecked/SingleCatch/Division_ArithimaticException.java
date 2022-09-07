@@ -1,6 +1,5 @@
-package ExceptionHandling;
+package ExceptionHandling.unchecked.SingleCatch;
 
-import java.util.Scanner;
 
 public class Division_ArithimaticException {
 
@@ -12,6 +11,10 @@ public class Division_ArithimaticException {
 		}
 		catch (Exception e) {
 			System.out.println("Please do not div by zero :: "+e);
+		} 
+		finally {
+			System.out.println("will be executed always even if exception or no exception");
+			//good place to close resources
 		}
 	
 		System.out.println("after exception");

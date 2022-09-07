@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.unchecked.SingleCatch;
 
 public class StringParser_NumberFormatException {
 

@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.unchecked.SingleCatch;
 
 import java.util.Iterator;
 

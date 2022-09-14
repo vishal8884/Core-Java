@@ -1,0 +1,24 @@
+--> if we want to synchronize only a block of code in a method then we can use this
+
+
+there are three methods to do this
+
+
+1) Synchronized(this) {
+
+     code ............
+     
+     }
+     
+
+2) Synchtonized(x) {         //x is object
+ 
+    code ...............
+   }
+   
+   
+3)   Synchronized(DisplayMessage.class) {      //by specifing class we can get class level lock
+
+      code.................
+
+   }

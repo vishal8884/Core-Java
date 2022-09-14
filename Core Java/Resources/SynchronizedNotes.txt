@@ -2,11 +2,11 @@
 
 Class ABC {
 
-  Syncthronized m1(){
+  Synchronized m1(){
   
   }
    
-  Syncthronized m2(){
+  Synchronized m2(){
   
   }
   
@@ -20,9 +20,16 @@ Explaination ::
 
 
 1) When we create object of ABC and m1() is called by thread1 
-then Thread2, thread 3 cannot access m1() and also m2() as thread1 has accquired lock for the object.
+then Thread2, thread 3 cannot access m1() method only.....It can access m2() and m3() ...(unless m1 and m2 and m3 are not static synchronized)
 
 2) once the processing is done the thread1 releases the lock on ABC object and other threads (Thread2, thread3) can access m1() and m2() based on their order and same 
 process continues as thread1.
 
 3) in case of m3() it can be accessed by any thread in the order it comes
+
+
+
+example of the use case:
+
+1) we use synchronized block when write operation is performed
+2) for read operation synchronized keyword is not required

@@ -1,0 +1,33 @@
+
+
+Class ABC {
+
+  static Synchronized m1(){
+  
+  }
+   
+  static Synchronized m2(){
+  
+  }
+  
+  static m3(){
+  
+  } 
+  
+  Synchronized m4(){
+  
+  } 
+  
+  m5(){
+  
+  } 
+
+}
+
+
+explanation ::
+
+
+1) When thread1 accesses m1() ..then it accquires class level lock on all static methods in class ABC (m1() , m2())
+2) other threads thread2,thread3... cannot access m1() and other static synchronized method ( m2()).
+3) other threads can access m3(),m4(),m5()..........(but m4() is synchronized so the thread which access this will get method level lock as specified in previous doc)

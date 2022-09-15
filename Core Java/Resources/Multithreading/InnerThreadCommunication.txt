@@ -1,0 +1,40 @@
+At some point we need thread to communicate with each other.
+
+
+
+wait()
+notify()
+notifyAll()
+
+
+
+example::
+
+We have two threads which want ot access synchronized object o
+
+1) Thread1 : t1
+2) Thread2 : t2
+3) Object o
+
+
+step 1 -> t1 is invoking method in object o..
+step 2 -> t2 wants to invoke the same object o (t2 has high priority set)
+step 3 -> t1 will go into wait state by calling wait()
+step 4 -> t2 will perform its job and after completing invoke notify() (which notifies lock on object)
+step 5 -> t1 will see that notify() is called by t1 and it will resume its operation in object o
+
+
+
+
+---------------------------------From Thread life cycle perpescective-----------------------------
+
+
+
+Runnable -> Running 
+    ^          |
+    |-----------wait 
+    
+1) runnable
+2) running
+3) wait
+4) dead

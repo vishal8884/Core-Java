@@ -1,0 +1,31 @@
+                                   java.lang.ThreadGroup
+                                   
+example
+
+1) consumer group Threads
+
+c1,c2,c3.......
+
+
+
+2) producer group Threads
+
+p1,p2,p3
+                                   
+                                   
+                                   
+                                   
+-------------------------------Uses------------------------------------------------
+
+1) we can perform thread group level operation.
+
+
+
+
+----------------------------------Example-----------------------------------------------
+
+System is parent to all the 1,2,3
+
+System - 1) Main          -> Main Thread, Thread1(any thread in main method) , MyThreadGroup - t2,t3
+         2) Finalizer
+         3) SignalDispatcher                                    

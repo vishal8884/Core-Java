@@ -12,6 +12,7 @@ public class MultiThreadedNamingThread extends Thread{
 
 	}
 	
+	@Override
 	public void run() {
 		Thread currentThread = Thread.currentThread();
 		currentThread.setName("name2");

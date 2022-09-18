@@ -1,0 +1,8 @@
+1) It runs in background and it assists the other threads that are running
+
+
+isDaemon()  boolean  -> checks if the given thread is a deamon thread
+
+
+
+2) main thread is non deamon thread by default

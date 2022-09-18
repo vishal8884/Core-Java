@@ -16,7 +16,6 @@ public class DeadLockDemo implements Runnable{
 
 	public static void main(String[] args) {
 		new DeadLockDemo();
-
 	}
 
 	@Override

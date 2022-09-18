@@ -1,0 +1,24 @@
+            FirstResource
+               fm1()
+               fm2()
+            Second resource
+               sm1()
+               sm2()
+               
+               
+       In the below steps in DeadLockDemo
+       
+       Thread1 -> we created it                       (Thread t1 = new Thread(this);)
+       Thread2 -> main thread        
+               
+               
+Step 1 ->  Thread1 accquires lock on FirstResource (method1() and method2())
+
+step 2 -> before Thread1 reaches sr.method2() (where it accquires lock on second resource ...line 15 FirstResource.class)
+          Thread2 would have accquired lock on SecondResource (sr obj)
+          
+step 3 -> Thread1 will wait for Thread2 to release lock on SeconfResource so that it can access sr.method2().
+
+Step 4 -> Thread2 will wait for Thread1 to release lock of FirstResource so that it can access fr.method2()          
+          
+step 3 -> as a result both t1 and t2 will wait for each other causing dead lock

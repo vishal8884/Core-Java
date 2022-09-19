@@ -1,0 +1,41 @@
+1) Stack -> all the local primitive types are stored
+
+
+
+2) Heap -> all the objects are stored in memory
+
+
+
+
+
+Garbage collection :: The process by which java automatically clears the memory allocated to particular object in heap space 
+
+Garbage collector -> is a deamon thread which run in background..(it garbage collects when the onjects are not reachable)
+
+
+-----------------------------------------------EXAMPLE--------------------------------------------------------------------------------------------------------
+
+example
+
+Account x = new Account()
+Account y = new Account()
+
+x = new Account() -> the above new Account is garbage collected
+
+
+y = x;  (then previous y object is garbage collected)
+
+
+x = null  (all the objects are garbage collected on heap)
+y = null
+
+
+
+
+
+
+-------------------------------------------IMP points----------------------------------------------------------------------------------------------------
+
+
+1)We cannot force garbage collector
+2) System.gc()   ...this just requests for garbage collector

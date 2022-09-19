@@ -9,7 +9,7 @@ public class GCDemo {
 	public static void main(String[] args) {
 		new GCDemo();
 		new GCDemo();
-		//System.gc();
+		//System.gc();    //this requests to garbage collect
 	}
 
 	@Override                    

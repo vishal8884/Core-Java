@@ -1,19 +1,23 @@
 package GarbageCollection;
 
 public class GCDemoPushingLimits {
+	
+	int objId;
+	
 
-	public GCDemoPushingLimits() {
-		System.out.println(this + "Created");
+	public GCDemoPushingLimits(int objId) {
+		this.objId = objId;
+		System.out.println("Created :: "+this.objId);
 	}
 
 	public static void main(String[] args) {
-		new GCDemoPushingLimits();
-		new GCDemoPushingLimits();
-		//System.gc();
+		for(int i=1;i<=500000;i++) {
+			new GCDemoPushingLimits(i);
+		}
 	}
 
 	@Override                    
 	protected void finalize() {  //This method calls up when the objects in main methods are garbage collected..this overrides jdk 
-		System.out.println(this+" Finalized");      //garbage is only collected only when jdk thinks that application is running out of storage
+		System.out.println("Finalized :: "+objId);      //garbage is only collected only when jdk thinks that application is running out of storage
 	}
 }

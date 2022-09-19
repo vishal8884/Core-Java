@@ -9,7 +9,7 @@ public class ExecuterDemo {
          CheckProcessorTask[] cps = {new CheckProcessorTask("ATM"), new CheckProcessorTask("Bank"),new CheckProcessorTask("mobile"), new CheckProcessorTask("Web")};
          
          ExecutorService service = Executors.newFixedThreadPool(2);   //creates and manage all 4 above tasks using 2 threads
-                                                                      //these 2 threads are shared by executers service to perform checkprocessor task
+                                                                      //these 2 threads are shared by executers service to perform checkprocessor task (atm,bank,mobile,web)
          
          for(CheckProcessorTask checkProcesorTask : cps) {
         	 service.submit(checkProcesorTask);

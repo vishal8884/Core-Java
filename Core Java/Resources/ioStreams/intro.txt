@@ -1,0 +1,59 @@
+
+1) Stream is a logical handler for the 
+               input source from which we can read data
+                           or
+               otput source to which we can write data    
+               
+               
+eg :         udemy ----> uses output stream send data -----> web browser
+
+             webBrowser <------- uses input stream to read the data <-------udemy
+             
+             
+             
+             
+             desktop -------------Read write-----------external hard drive
+             
+     
+     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------     
+             
+             
+2) Java supports 4 types of streams
+
+
+      1) byte streams                          -->  read and write one byte at a type                       (used for binary data)
+      2) character streams                     -->  read and write one character at one time (unicode)      (used for textual data)          
+      3) buffered streams                      -->  wrap byte and character stream...allows us to read more data
+      4) object streams                        -->  read and write objects....process is called serialization
+      
+      
+      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+
+3) package   java.io
+
+imp classes ::
+
+InputStream
+OutputStream
+FileInputStream
+FileOutputStream
+
+
+Reader
+Writer
+
+FileReader
+FileWriter
+
+File
+              
+              
+      EXCEPTIONS THROWED
+      
+      1) FileNotFoundException
+      2) IOException
+    

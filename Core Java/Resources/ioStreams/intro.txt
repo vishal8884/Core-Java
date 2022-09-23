@@ -37,22 +37,23 @@ eg :         udemy ----> uses output stream send data -----> web browser
 
 imp classes ::
 
-InputStream
-OutputStream
-FileInputStream
-FileOutputStream
+    1) InputStream
+    2) OutputStream
+    3) FileInputStream
+    4) FileOutputStream
 
 
-Reader
-Writer
+    5) Reader
+    6) Writer
 
-FileReader
-FileWriter
+    7) FileReader
+    8) FileWriter
 
-File
+    9) File
               
               
-      EXCEPTIONS THROWED
+      EXCEPTIONS THROWED or needs to be handled
+      
       
       1) FileNotFoundException
       2) IOException

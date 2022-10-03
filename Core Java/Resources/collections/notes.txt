@@ -1,0 +1,26 @@
+List 
+
+1) ArrayList
+2) LinkedList
+3) Vector --> syncronized (old not used now)
+
+
+Set
+
+1) HashSet       --> LinkedHashSet        (Linked means insertion order is maintained)
+2) SortedSet     --> TreeSet              (Tree means we have either ascending order or desending order)
+
+
+ 
+Queue                --> linked list is also a queue
+
+1) Priority queue
+
+
+
+Map       -> used to store key and value pair
+
+
+1) HashMap   --> LinkedHashMap
+2) SortedMap --> treeMap
+3) HashTable --> syncronized (we rarely used synchronized collections as most of the java applications are multithreaded)

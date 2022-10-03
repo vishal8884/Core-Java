@@ -1,0 +1,11 @@
+ArrayList
+
+
+1) uses an array to store the data
+2) FAST ACCESS
+3) insertion and deletions are very slow (because it needs to re-shuffle entire array)
+4) by default capacity size is 10...beyond 10 it will create 1.5 times the initial array
+
+When to use
+
+1) lot of read operations instead of instead and delete

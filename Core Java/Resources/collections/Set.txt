@@ -1,0 +1,4 @@
+Set
+
+1) HashSet   -> LinkedHashSet
+2) Sorted set -> Navigable -> treeSet

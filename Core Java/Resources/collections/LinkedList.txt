@@ -1,0 +1,13 @@
+null obj next ->> prev obj next --> prev bj next
+
+
+Adv
+
+1) Inserts and Deletes are fast...no need to reshuffule
+
+
+
+Dis adv
+
+1) takes more memory as it needs to have ref for prev and next nodes
+2) slow random access 

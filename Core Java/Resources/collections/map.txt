@@ -1,0 +1,18 @@
+Map 
+
+1) HashMap     -> LinkedHashMap
+
+2) IdentityHashMap
+
+3) WeakHashMap
+
+4) SortedMap   -> NaigableMap --> TreeMap
+
+
+//below are old ...not used now much
+
+5) Dictionary
+
+6) HashTable
+
+7) Properties

@@ -11,6 +11,7 @@ public class UserAccount {
 	private int Gender;
 	private int city;
 	private String country;
+	private Interest interest;
 
 	public int getId() {
 		return id;
@@ -84,4 +85,20 @@ public class UserAccount {
 		this.country = country;
 	}
 
+	public Interest getInterest() {
+		return interest;
+	}
+
+	public void setInterest(Interest interest) {
+		this.interest = interest;
+	}
+
+	@Override
+	public String toString() {
+		return "UserAccount [id=" + id + ", userName=" + userName + ", password=" + password + ", age=" + age
+				+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", Gender=" + Gender + ", city=" + city
+				+ ", country=" + country + ", interest=" + interest + "]";
+	}
+
+	
 }

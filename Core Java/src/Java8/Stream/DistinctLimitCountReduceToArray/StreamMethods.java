@@ -4,11 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Examples1 {
+public class StreamMethods {
 
 	//https://www.youtube.com/watch?v=-utC-IMnHwI&list=PLUDwpEzHYYLvTPVqVIt7tlBohABLo4gyg&index=5
 	public static void main(String[] args) {
-
 		List<String> cars = Arrays.asList("TATA","BMW","MERCIDES","FORD","SANTRO","I20","FORD","I20","SANTRO");
 		
 		//Distinct and Count
@@ -19,9 +18,12 @@ public class Examples1 {
 		System.out.println("distinctCarsCount :: "+distinctCarsCount);
 		
 		
+		
 		//Limit in Streams
 		List<String> carsLimited = cars.stream().limit(4).collect(Collectors.toList());
 		System.out.println("carsLimited :: "+carsLimited);
+		
+		
 		
 		//Min and Max in Streams
 		String minCar = cars.stream().min((a,b) -> a.compareTo(b)).get();
@@ -30,9 +32,17 @@ public class Examples1 {
 		String maxCar = cars.stream().max((a,b) -> a.compareTo(b)).get();
 		System.out.println("maxCar :: "+maxCar);
 		
-		//Reduce method
+		
+		
+		//Reduce method  
+		//It reduces and makes it as a string thats why its called reduce method
 		String reducedCar = cars.stream().reduce((value,combined) -> value + combined).get(); //This is opposite to flatmap..it will kepp of adding all values of the list as a string
 		System.out.println("reducedCar :: "+reducedCar);
+		
+		String reducedCar2 = cars.stream().reduce((value,combined) -> {   
+			System.out.println("value :: "+value+"     combined :: "+combined);   //Check this print statement to understand it better
+			return value + combined;
+		}).get();
 	}
 
 }

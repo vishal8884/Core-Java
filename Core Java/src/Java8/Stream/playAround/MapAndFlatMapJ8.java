@@ -34,13 +34,24 @@ public class MapAndFlatMapJ8 {
 		System.out.println("student first names :: "+studentNames);
 		
 		
-		//Example of flat map//TODO Reduce operation
+		//Example3  of flat map//TODO Reduce operation
 		
 		List<Student> flattenedStudents = students.stream()
 		        .flatMap(student -> students.stream())
 		        .collect(Collectors.toList());
-		
+		System.out.println("students :: "+students);
 		System.out.println("flattenedStudents :: "+flattenedStudents);
+		
+		//Example 4 -> Get student names chars flattened
+		
+//		students.stream()
+//		        .map(student -> student.getFirstName())
+//		        .flatMap(pList -> pList.stream()).
+	}
+	
+	
+	private List<String> split(String s){
+		return Arrays.asList(s.split(""));
 	}
 
 }

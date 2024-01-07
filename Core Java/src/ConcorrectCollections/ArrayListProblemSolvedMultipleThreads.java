@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ArrayListProblemSolvedMultipleThreads extends Thread{
 	
 	
-	static CopyOnWriteArrayList<Object> courses = new CopyOnWriteArrayList();
+	static CopyOnWriteArrayList<Object> courses = new CopyOnWriteArrayList<>();
 
 	public static void main(String[] args) {
 

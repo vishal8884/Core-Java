@@ -1,4 +1,4 @@
-package concorrency.course2.interThreadCommunication;
+package concorrency.course2.interThreadCommunication.playArounbd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ class Processor {
 }
 
 
-public class ProducerAndConsumerExample {
+public class ProducerAndConsumerExampleOwn {
     private static final int LOWER_LIMIT = 1;
     private static final int HIGHER_LIMIT = 5;
 

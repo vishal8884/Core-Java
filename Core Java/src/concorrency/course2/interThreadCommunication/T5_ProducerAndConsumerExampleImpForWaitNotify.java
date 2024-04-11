@@ -11,7 +11,7 @@ class Processor {
         this.lowerLimit = lowerLimit;
         this.upperLimit = upperLimit;
     }
-    public List<Double> list = new ArrayList<>();
+    public final List<Double> list = new ArrayList<>();
     public Object o1 = new Object();
     public int value = 0;
 
@@ -46,6 +46,8 @@ class Processor {
                     System.out.println("removing value "+list.get(list.size()-1));
                     list.remove(list.size()-1);
                     list.notify(); //this notify will not work until this method finishs or wait() is called
+                    //notify says my tasks is completed you can resume your tasks who ever is wating
+                    //This notify is mainly to notify above thread 1 wait()
                 }
                 Thread.sleep(1000);
             }
@@ -58,7 +60,7 @@ class Processor {
 }
 
 
-public class ProducerAndConsumerExampleImpForWaitNotify {
+public class T5_ProducerAndConsumerExampleImpForWaitNotify {
     private static final int LOWER_LIMIT = 1;
     private static final int HIGHER_LIMIT = 5;
 

@@ -1,6 +1,6 @@
 package concorrency.course2.interThreadCommunication;
 
-public class LockingWithCustomObjects {
+public class T4_LockingWithCustomObjects {
     public static int counter1 = 0;
     public static int counter2 = 0;
     public static final Object o1 = new Object();

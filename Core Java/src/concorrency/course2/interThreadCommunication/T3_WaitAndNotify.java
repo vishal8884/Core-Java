@@ -20,7 +20,7 @@ class ConsumerProducerService {
 }
 
 
-public class WaitAndNotify {
+public class T3_WaitAndNotify {
     public static void main(String[] args) {
         ConsumerProducerService consumerProducerService = new ConsumerProducerService();
 

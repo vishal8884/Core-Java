@@ -2,7 +2,7 @@ package concorrency.course2.interThreadCommunication;
 
 import java.util.stream.IntStream;
 
-public class SyncExample {
+public class T2_SyncExample {
     static int counter = 0;
     private static final Object o = new Object();
 

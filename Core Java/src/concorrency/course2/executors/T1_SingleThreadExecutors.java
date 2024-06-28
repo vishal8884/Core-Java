@@ -14,7 +14,7 @@ class Runner implements Runnable{
     @Override
     public void run() {
         long duration = (long) (Math.random() * 5);
-        System.out.println("n :: "+n+"    Thread :: "+Thread.currentThread().getName()+"    duration for sleep :: "+duration);
+        System.out.println("n :: "+n+"    Thread :: "+Thread.currentThread().getName()+"    duration for sleep in seconds:: "+duration);
 
         try {
             TimeUnit.SECONDS.sleep(duration);

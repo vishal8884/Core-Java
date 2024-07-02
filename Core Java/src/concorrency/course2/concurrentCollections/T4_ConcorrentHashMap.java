@@ -2,6 +2,11 @@ package concorrency.course2.concurrentCollections;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+/*
+1) In concorrent hashmap Thread are locked based on segments
+ example Thread1 can update segement 1 of map and Thread2 can updated segement 2 of map parallely
+         get() can be done from any segment parallely (even same segement)
+ */
 class UpdateWorker implements Runnable{
     private ConcurrentHashMap<String,Integer> concurrentHashMap;
 

@@ -1,6 +1,43 @@
 package Java8.Stream;
 
+import playaround.other.Person;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class T2_TypesOfCollectors {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Emily");
+
+        // Collect names starting with 'A' into a new list
+        List<String> filteredNames = names.stream()
+                .filter(name -> name.startsWith("A"))
+                .collect(Collectors.toList());
+
+        System.out.println("Filtered names: " + filteredNames);
+
+        //Grouping By
+
+        List<Person> people = Arrays.asList(
+                new Person("Alice", 25),
+                new Person("Bob", 30),
+                new Person("Charlie", 25),
+                new Person("David", 30),
+                new Person("Emily", 35)
+        );
+
+        // Group people by age
+        Map<Integer, List<Person>> peopleByAge = people.stream()
+                .collect(Collectors.groupingBy(Person::getAge));
+
+        // Print people grouped by age
+        peopleByAge.forEach((age, persons) -> {
+            System.out.println("Age: " + age);
+            persons.forEach(person -> System.out.println("  " + person.getName()));
+        });
+    }
 }
 
 /*

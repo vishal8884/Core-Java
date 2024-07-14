@@ -7,12 +7,11 @@ public class RunnerApp {
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = null;
-        ChopStick[] chopSticks = null;
         Philosopher[] philosophers = null;
 
         try{
-            chopSticks = new ChopStick[Constants.NUM_OF_CHOPSTICKS];
             philosophers = new Philosopher[Constants.NUM_OF_PHILOSOPHERS];
+            ChopStick[] chopSticks = new ChopStick[Constants.NUM_OF_CHOPSTICKS];
 
             //initialize chopsticks
             for(int i=0;i<Constants.NUM_OF_CHOPSTICKS;i++){
@@ -23,12 +22,12 @@ public class RunnerApp {
 
             //init philosophers
             for(int i=0;i<Constants.NUM_OF_PHILOSOPHERS;i++){
-                ChopStick rightChopStick = chopSticks[i+1 % Constants.NUM_OF_CHOPSTICKS];
+                ChopStick rightChopStick = chopSticks[(i+1) % Constants.NUM_OF_CHOPSTICKS];
                 philosophers[i] = new Philosopher(i,chopSticks[i],rightChopStick);
                 executorService.execute(philosophers[i]);
             }
 
-            Thread.sleep(5000);
+            Thread.sleep(Constants.SIMULATION_RUNNING_TIME);
 
             for(Philosopher philosopher : philosophers){
                 philosopher.setFull(true);

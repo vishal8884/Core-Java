@@ -36,7 +36,7 @@ public class T1_CreateVirtualThreads {
 
 
 
-    private static Runnable getRunnable(){
+    public static Runnable getRunnable(){
         return () -> {
             System.out.println("Started Thread :: "+Thread.currentThread().getName());
             try {

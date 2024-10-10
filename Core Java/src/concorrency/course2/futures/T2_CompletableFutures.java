@@ -16,7 +16,7 @@ public class T2_CompletableFutures {
                 .thenAccept(System.out::println); // Runs in the same thread as the previous step
 
         CompletableFuture<Void> voidCompletableFuture = CompletableFuture.supplyAsync(() -> "Hello My Name is Vishal", executorService1) // First step computation is async
-                .thenApplyAsync(s -> s.toUpperCase(), executorService2) // Runs in a different thread as specified by executorService2
+                .thenApplyAsync(s -> s.toUpperCase(), executorService2) // Runs in a different thread as specified by executorService2 but waits for earlier operation to be done
                 .thenApplyAsync(s -> s + ".") // Runs in the same thread as the previous step
                 .thenAccept(System.out::println); // Runs in the same thread as the previous step
     }

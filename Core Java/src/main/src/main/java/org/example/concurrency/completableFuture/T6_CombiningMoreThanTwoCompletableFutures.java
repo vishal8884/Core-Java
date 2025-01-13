@@ -73,8 +73,17 @@ public class T6_CombiningMoreThanTwoCompletableFutures {
     }
 
     private static void delay(int sec) {
+        String timeUnits = "seconds";
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit timeUnit = switch (timeUnits)  {
+                case "Seconds","seconds" -> TimeUnit.SECONDS;
+                case "Minutes","minutes" -> TimeUnit.MINUTES;
+                case "ms","milliseconds" -> TimeUnit.MILLISECONDS;
+                default -> throw new IllegalStateException("Unexpected value: " + timeUnits);
+            };
+
+
+            timeUnit.sleep(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
